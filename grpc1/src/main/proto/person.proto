@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "az.etibarli.grpc1";
+option java_multiple_files = true;
+
+import "common/address.proto";
+import "common/car.proto";
+import "google/protobuf/wrappers.proto";
+
+message Person {
+  string name = 1;
+  google.protobuf.Int32Value age = 2;
+  common.Address address = 3;
+  repeated common.Car car = 4;
+}

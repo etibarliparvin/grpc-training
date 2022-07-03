@@ -3,6 +3,7 @@ package az.etibarli.grpc1.protobuf;
 import az.etibarli.grpc1.Address;
 import az.etibarli.grpc1.Car;
 import az.etibarli.grpc1.Person;
+import com.google.protobuf.Int32Value;
 
 public class CompositionDemo {
 
@@ -27,7 +28,7 @@ public class CompositionDemo {
 
         Person sam = Person.newBuilder()
                 .setName("sam")
-                .setAge(25)
+                .setAge(Int32Value.newBuilder().setValue(25).build())
                 .addCar(accord)
                 .addCar(civic)
                 .setAddress(address)

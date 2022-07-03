@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option java_package = "az.etibarli.grpc1";
+option java_multiple_files = true;
+
+import "common/address.proto";
+import "common/car.proto";
+import "google/protobuf/wrappers.proto";
+
+//// v1
+//message Television {
+//  string brand = 1;
+//  int32 year = 2;
+//}
+
+// v2
+//message Television {
+//  string brand = 1;
+//  int32 model = 2;
+//  Type type = 3;
+//}
+
+enum Type {
+  HD = 0;
+  UHD = 1;
+  OLED = 2;
+}
+
+// v3
+message Television {
+  string brand = 1;
+  Type type = 2;
+}
+

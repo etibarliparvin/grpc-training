@@ -1,0 +1,11 @@
+syntax = "proto3";
+package common;
+
+option java_package = "az.etibarli.grpc1";
+option java_multiple_files = true;
+
+message Address {
+  int32 postbox = 1;
+  string street = 2;
+  string city = 3;
+}
