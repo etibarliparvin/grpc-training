@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2022.07.03
+      author: etibarli
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: person_id
+            baseTableName: address
+            baseTableSchemaName: public
+            referencedTableSchemaName: public
+            constraintName: fk_address_person
+            referencedColumnNames: id
+            referencedTableName: person

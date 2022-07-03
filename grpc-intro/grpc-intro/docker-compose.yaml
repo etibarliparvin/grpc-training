@@ -1,0 +1,16 @@
+version: "3.5"
+services:
+  postgres:
+    image: "postgres"
+    ports:
+      - "1112:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=unknown
+      - PGDATA=/var/lib/pgsql_docker/data
+    volumes:
+      - database-data:/var/lib/postgresql/data/
+#      - ./db/init-db.sql:/docker-entrypoint-initdb.d/profiles_db.sql
+volumes:
+  database-data:

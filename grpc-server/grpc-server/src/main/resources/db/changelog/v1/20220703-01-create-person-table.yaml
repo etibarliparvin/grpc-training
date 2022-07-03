@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2022.07.03
+      author: etibarli
+      changes:
+        - createTable:
+            tableName: address
+            schemaName: public
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: address_pk
+                    nullable: false
+              - column:
+                  name: country
+                  type: varchar(250)
+              - column:
+                  name: city
+                  type: varchar(250)
+              - column:
+                  name: location
+                  type: varchar(250)
+              - column:
+                  name: person_id
+                  type: bigint
