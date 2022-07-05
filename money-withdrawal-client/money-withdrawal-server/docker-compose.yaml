@@ -3,11 +3,11 @@ services:
   postgres:
     image: "postgres"
     ports:
-      - "1112:5432"
+      - "1234:5432"
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=unknown
+      - POSTGRES_DB=money
       - PGDATA=/var/lib/pgsql_docker/data
     volumes:
       - database-data:/var/lib/postgresql/data/

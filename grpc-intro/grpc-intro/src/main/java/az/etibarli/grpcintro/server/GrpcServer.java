@@ -13,8 +13,5 @@ public class GrpcServer {
                 .addService(new BankService())
                 .build();
 
-        Server server = NettyServerBuilder.forAddress("localhost", )
-        server.start();
-        server.awaitTermination();
     }
 }

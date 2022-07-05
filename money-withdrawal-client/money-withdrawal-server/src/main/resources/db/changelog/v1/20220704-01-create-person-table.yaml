@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2022.07.03
+      author: etibarli
+      changes:
+        - createTable:
+            tableName: person
+            schemaName: public
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: person_pk
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(250)
+              - column:
+                  name: surname
+                  type: varchar(250)

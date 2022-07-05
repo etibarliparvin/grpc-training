@@ -108,7 +108,7 @@ liquibase {
     activities {
         main {
             changeLogFile changeLogMasterFileName
-            url 'jdbc:postgresql://localhost:1112/unknown'
+            url 'jdbc:postgresql://localhost:1234/money'
             username 'postgres'
             password 'root'
             defaultSchemaName 'public'
@@ -157,7 +157,7 @@ jooq {
             generationTool {
                 jdbc {
                     driver = 'org.postgresql.Driver'
-                    url = 'jdbc:postgresql://localhost:1112/unknown'
+                    url = 'jdbc:postgresql://localhost:1234/money'
                     user = 'postgres'
                     password = 'root'
                     properties {
